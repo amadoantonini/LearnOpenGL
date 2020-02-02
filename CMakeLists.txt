@@ -4,5 +4,3 @@ set(CMAKE_CXX_STANDARD 17)
 project(learn_opengl)
 
 add_subdirectory(src)
-add_subdirectory(thirdparty)
-
