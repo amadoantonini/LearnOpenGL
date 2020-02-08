@@ -11,19 +11,11 @@ set(REQUIRED_LIBRARIES
   ${CMAKE_DL_LIBS}
   )
 
-add_executable(HelloOpenGL learn_opengl/main.cpp)
-target_include_directories(HelloOpenGL PRIVATE
-  ${GLEW_INCLUDE_DIRS}
-  )
-target_link_libraries(HelloOpenGL
-  ${REQUIRED_LIBRARIES}
-  )
+# HelloOpengl
+add_subdirectory(hello_opengl)
 
-add_executable(Shaders learn_opengl/shaders.cpp)
-target_include_directories(Shaders
-  PRIVATE
-    ${GLEW_INCLUDE_DIRS}
-  )
-target_link_libraries(Shaders
-  ${REQUIRED_LIBRARIES}
-  )
+# Shaders
+add_subdirectory(shaders)
+
+# Textures
+add_subdirectory(textures)

@@ -1,1 +1,2 @@
 #define SHADER_DIR "@PROJECT_SOURCE_DIR@/shaders"
+#define TEXTURE_DIR "@PROJECT_SOURCE_DIR@/textures"
