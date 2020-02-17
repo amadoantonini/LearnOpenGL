@@ -19,7 +19,7 @@
 
 namespace fs = std::experimental::filesystem;
 
-const fs::path shader_dir(SHADER_DIR);
+const fs::path shader_dir = fs::path(SHADER_DIR)/"transformations";
 const fs::path texture_dir(TEXTURE_DIR);
 
 void resizeWindowCallback(GLFWwindow* window, int width, int height) {
@@ -67,7 +67,7 @@ int main() {
    * Build and compile shader program
    */
   const fs::path vert_shader_path = shader_dir/"transformations.vert";
-  const fs::path frag_shader_path = shader_dir/"textures.frag";
+  const fs::path frag_shader_path = shader_dir/"transformations.frag";
   ShaderProgram shaderProgram(vert_shader_path.c_str(), frag_shader_path.c_str());
 
   /**
